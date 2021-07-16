@@ -34,10 +34,10 @@ const acquireToken = async () => {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${authResponse.accessToken}`
         };
-        const path = `http://localhost:3000/graphql`;
-        fetch(path, {
+        fetch(process.env.SAFE_API, {
             method: 'post',
             headers,
+            // You can use any query from the GraqhQL API
             body: JSON.stringify({ "query": "query GetApplications {\napplications {    id \n  name  }  }" })
         }).catch(err => console.log('FETCH ERROR', err))
         .then(res => res.json())
