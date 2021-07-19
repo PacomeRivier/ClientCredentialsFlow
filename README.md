@@ -54,11 +54,6 @@ You must also fill the `.env` file with the following variables:
 
 In the first part of the script, we initialize the msal config, the system property can be removed for production and is only useful for logging.
 ``` javascript
-const msal = require('@azure/msal-node');
-const fetch = require('node-fetch');
-const dotenv = require('dotenv');
-dotenv.config();
-
 const msalConfig = {
 	auth: {
 		clientId: process.env.CLIENT_ID,
