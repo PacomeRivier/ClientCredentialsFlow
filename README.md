@@ -85,6 +85,10 @@ const authResponse = await cca.acquireTokenByClientCredential(tokenRequest);
 Finally we can use the token in the headers of our request as follows.
 
 ``` javascript
+const headers = {
+    'Content-Type': 'application/json',
+    'Authorization': `Bearer ${authResponse.accessToken}`
+};
 fetch(process.env.SAFE_API, {
     method: 'post',
     headers,
