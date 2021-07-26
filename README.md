@@ -21,9 +21,9 @@ This readme details the process to authenticate to SAFE back-end using the clien
 
 ![Add permission](./img/add_permission.png)
 
-- Select the app role used for external applications by the SAFE.
+- Select the app role used for external applications by the SAFE app registration. If you can't select the Application permissions option, you must first create an application role on the SAFE app registration.
 
-![Add permission](./img/add_permission.png)
+![Choose app role](./img/choose_app_role.png)
 
 - Make sure that the `accessTokenAcceptedVersion` property in your client application's manifest is set to `2`.
 
